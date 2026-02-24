@@ -1,21 +1,16 @@
 
 (() => {
-  // ========= CONFIG =========
   const INVENTORY_URL = "./inventario.json";
 
-  // TODO: pon aquí el número fijo de WhatsApp (sin +, sin espacios).
-  // Ejemplo México: "52" + 10 dígitos
   const WHATSAPP_NUMBER = "522283338572";
 
   const STORAGE_KEY = "dg_inventory_selection_v1";
 
-  // Status según tu mensaje solicitado:
-  const STATUS_OUT = "out"; // Se acabó  -> 🚫
-  const STATUS_LOW = "low"; // Queda Poco -> ⚠️
+  const STATUS_OUT = "out"; // Se acabó
+  const STATUS_LOW = "low"; // Queda Poco
   const EMOJI_OUT = "\uD83D\uDEAB";  // 🚫
   const EMOJI_LOW = "\u26A0\uFE0F";  // ⚠️
 
-  // ========= DOM =========
   const $categorySelect = document.getElementById("categorySelect");
   const $subcategorySelect = document.getElementById("subcategorySelect");
   const $searchInput = document.getElementById("searchInput");
@@ -34,22 +29,18 @@
   const $sendBtn = document.getElementById("sendBtn");
   const $clearBtn = document.getElementById("clearBtn");
 
-  // Ajuste de títulos del resumen para alinearlos con tu formato (sin tocar HTML)
-  // En tu HTML venían invertidos; aquí los dejamos como tú lo pediste:
   const summaryTitles = document.querySelectorAll(".summaryMini__title");
   if (summaryTitles.length >= 2) {
     summaryTitles[0].textContent = "🚫 Se acabó";
     summaryTitles[1].textContent = "⚠️ Queda Poco";
   }
 
-  // ========= ESTADO =========
   /** @type {Array<{id:string, producto:string, categoria:string, subcategoria:string}>} */
   let inventory = [];
 
-  /** selectionMap: { [id]: "out" | "low" } */
+
   let selectionMap = loadSelection();
 
-  // ========= INIT =========
   init().catch((err) => {
     console.error(err);
     if ($loadingState) $loadingState.textContent = "Error cargando inventario.";
@@ -58,12 +49,10 @@
   async function init() {
     inventory = await fetchInventory(INVENTORY_URL);
 
-    // Orden bonito (alfabético por producto)
     inventory.sort((a, b) => a.producto.localeCompare(b.producto, "es"));
 
     populateCategorySelect(inventory);
 
-    // Configurar listeners
     $categorySelect.addEventListener("change", () => {
       populateSubcategorySelect(inventory, $categorySelect.value);
       renderList();
@@ -88,32 +77,26 @@ $sendBtn.addEventListener("click", () => {
 
   const url = buildWhatsAppUrl(WHATSAPP_NUMBER, msg);
 
-  // 1) Reiniciar ANTES de salir a WhatsApp (más confiable en móvil)
   clearSelection();
   renderList();
   renderSummary();
 
-  // 2) Abrir WhatsApp
-  // Intentamos nueva pestaña (desktop / algunos móviles). Si se bloquea, caemos a navegación normal.
   const opened = window.open(url, "_blank");
   if (!opened) {
     window.location.href = url;
   }
 });
 
-    // Primer render
     populateSubcategorySelect(inventory, $categorySelect.value);
     renderList();
     renderSummary();
   }
 
-  // ========= DATA =========
   async function fetchInventory(url) {
     const res = await fetch(url, { cache: "no-cache" });
     if (!res.ok) throw new Error(`No se pudo cargar ${url} (${res.status})`);
     const data = await res.json();
 
-    // Validación mínima y limpieza
     const clean = [];
     const seen = new Set();
 
@@ -126,7 +109,6 @@ $sendBtn.addEventListener("click", () => {
 
       if (!id || !producto || !categoria) continue;
 
-      // Evitar duplicados por ID (por si acaso)
       if (seen.has(id)) continue;
       seen.add(id);
 
@@ -136,7 +118,6 @@ $sendBtn.addEventListener("click", () => {
     return clean;
   }
 
-  // ========= SELECTS =========
   function populateCategorySelect(items) {
     const categories = Array.from(new Set(items.map((x) => x.categoria))).sort((a, b) =>
       a.localeCompare(b, "es")
@@ -168,15 +149,12 @@ $sendBtn.addEventListener("click", () => {
       $subcategorySelect.appendChild(opt);
     }
 
-    // Habilitar sólo si hay categoría seleccionada y existen subcategorías
     $subcategorySelect.disabled = subcats.length === 0;
   }
 
-  // ========= RENDER LIST =========
   function renderList() {
     if (!$inventoryContainer) return;
 
-    // Quitar "Cargando…"
     if ($loadingState) $loadingState.style.display = "none";
 
     const categoryValue = $categorySelect.value;
@@ -217,7 +195,6 @@ $sendBtn.addEventListener("click", () => {
       const actions = document.createElement("div");
       actions.className = "inventoryItem__actions";
 
-      // 🚫 -> Se acabó
       const btnWarn = document.createElement("button");
       btnWarn.className = "iconBtn";
       btnWarn.type = "button";
@@ -225,7 +202,6 @@ $sendBtn.addEventListener("click", () => {
       btnWarn.title = "Se acabó";
       btnWarn.setAttribute("aria-label", `Marcar "${item.producto}" como Se acabó`);
 
-      // ⚠️ -> Queda Poco
       const btnDanger = document.createElement("button");
       btnDanger.className = "iconBtn";
       btnDanger.type = "button";
@@ -233,7 +209,6 @@ $sendBtn.addEventListener("click", () => {
       btnDanger.title = "Queda Poco";
       btnDanger.setAttribute("aria-label", `Marcar "${item.producto}" como Queda Poco`);
 
-      // Estado visual
       applyButtonState(item.id, btnWarn, btnDanger);
 
       btnWarn.addEventListener("click", () => {
@@ -263,21 +238,17 @@ $sendBtn.addEventListener("click", () => {
   function applyButtonState(id, btnWarn, btnDanger) {
     const st = selectionMap[id];
 
-    // Reset
     btnWarn.classList.remove("active-warn");
     btnDanger.classList.remove("active-danger");
 
-    // Si está marcado como OUT (Se acabó) -> activar 🚫
     if (st === STATUS_OUT) btnWarn.classList.add("active-warn");
 
-    // Si está marcado como LOW (Queda Poco) -> activar ⚠️
     if (st === STATUS_LOW) btnDanger.classList.add("active-danger");
 
     updateCounts();
   }
 
   function toggleStatus(id, status) {
-    // Mutuamente excluyente: si clickeas el mismo estado, lo quitas; si no, lo pones.
     if (selectionMap[id] === status) {
       delete selectionMap[id];
     } else {
@@ -287,7 +258,6 @@ $sendBtn.addEventListener("click", () => {
     updateCounts();
   }
 
-  // ========= SUMMARY =========
   function renderSummary() {
     const outItems = getSelectedItemsByStatus(STATUS_OUT);
     const lowItems = getSelectedItemsByStatus(STATUS_LOW);
@@ -319,7 +289,6 @@ $sendBtn.addEventListener("click", () => {
     $clearBtn.disabled = total === 0;
   }
 
-  // ========= MESSAGE / WHATSAPP =========
   function buildMessage() {
     const outItems = getSelectedItemsByStatus(STATUS_OUT);
     const lowItems = getSelectedItemsByStatus(STATUS_LOW);
@@ -361,7 +330,6 @@ function buildWhatsAppUrl(phone, text) {
     return `${dd}/${mm}/${yyyy}`;
   }
 
-  // ========= STORAGE =========
   function loadSelection() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -378,7 +346,6 @@ function buildWhatsAppUrl(phone, text) {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
     } catch {
-      // ignorar
     }
   }
 
@@ -387,7 +354,6 @@ function buildWhatsAppUrl(phone, text) {
     try {
       localStorage.removeItem(STORAGE_KEY);
     } catch {
-      // ignorar
     }
     updateCounts();
   }
