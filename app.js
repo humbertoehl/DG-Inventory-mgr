@@ -8,8 +8,10 @@
 
   const STATUS_OUT = "out"; // Se acabó
   const STATUS_LOW = "low"; // Queda Poco
+  const STATUS_OK = "ok"; // hay buena cantidad
   const EMOJI_OUT = "\uD83D\uDEAB";  // 🚫
   const EMOJI_LOW = "\u26A0\uFE0F";  // ⚠️
+  const EMOJI_OK = "\u2705";  // ✅
 
   const $categorySelect = document.getElementById("categorySelect");
   const $subcategorySelect = document.getElementById("subcategorySelect");
@@ -209,22 +211,36 @@ $sendBtn.addEventListener("click", () => {
       btnDanger.title = "Queda Poco";
       btnDanger.setAttribute("aria-label", `Marcar "${item.producto}" como Queda Poco`);
 
-      applyButtonState(item.id, btnWarn, btnDanger);
+      const btnOk = document.createElement("button");
+      btnOk.className = "iconBtn";
+      btnOk.type = "button";
+      btnOk.textContent = "✅";
+      btnOk.title = "Ok";
+      btnOk.setAttribute("aria-label", `Marcar "${item.producto}" como Ok`);
+
+      applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
 
       btnWarn.addEventListener("click", () => {
         toggleStatus(item.id, STATUS_OUT); // 🚫
-        applyButtonState(item.id, btnWarn, btnDanger);
+        applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
         renderSummary();
       });
 
       btnDanger.addEventListener("click", () => {
         toggleStatus(item.id, STATUS_LOW); // ⚠️
-        applyButtonState(item.id, btnWarn, btnDanger);
+        applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
+        renderSummary();
+      });
+
+      btnOk.addEventListener("click", () => {
+        toggleStatus(item.id, STATUS_OK); // ✅ 
+        applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
         renderSummary();
       });
 
       actions.appendChild(btnWarn);
       actions.appendChild(btnDanger);
+      actions.appendChild(btnOk);
 
       row.appendChild(name);
       row.appendChild(actions);
@@ -235,18 +251,25 @@ $sendBtn.addEventListener("click", () => {
     updateCounts();
   }
 
-  function applyButtonState(id, btnWarn, btnDanger) {
-    const st = selectionMap[id];
+function applyButtonState(id, row, btnWarn, btnDanger, btnOk) {
+  const st = selectionMap[id];
 
-    btnWarn.classList.remove("active-warn");
-    btnDanger.classList.remove("active-danger");
+  btnWarn.classList.remove("active-warn");
+  btnDanger.classList.remove("active-danger");
+  btnOk.classList.remove("active-ok");
 
-    if (st === STATUS_OUT) btnWarn.classList.add("active-warn");
+  row.classList.remove("inventoryItem--marked");
 
-    if (st === STATUS_LOW) btnDanger.classList.add("active-danger");
+  if (st === STATUS_OUT) btnWarn.classList.add("active-warn");
+  if (st === STATUS_LOW) btnDanger.classList.add("active-danger");
+  if (st === STATUS_OK) btnOk.classList.add("active-ok");
 
-    updateCounts();
+  if (st === STATUS_OUT || st === STATUS_LOW || st === STATUS_OK) {
+    row.classList.add("inventoryItem--marked");
   }
+
+  updateCounts();
+}
 
   function toggleStatus(id, status) {
     if (selectionMap[id] === status) {

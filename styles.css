@@ -148,7 +148,7 @@ select:disabled {
   padding: 4px 6px;
   cursor: pointer;
   transition: var(--transition);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .iconBtn:hover {
@@ -156,15 +156,29 @@ select:disabled {
 }
 
 .iconBtn.active-warn {
-  background: #d9a441;
+  background: #b33a3a;
   color: #000;
 }
 
 .iconBtn.active-danger {
-  background: #b33a3a;
+  background:  #d9a441;
   color: #fff;
 }
 
+.iconBtn.active-ok {
+  background:  #086e21;
+  color: #fff;
+}
+
+
+.inventoryItem--marked {
+  opacity: 0.55;
+}
+
+.inventoryItem--marked .inventoryItem__name {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
 
 .panel--send h2 {
   margin: 0 0 6px 0;
