@@ -1,0 +1,554 @@
+[
+  {
+    "id": "insumos-cocina__miscelanea__mantequilla",
+    "producto": "Mantequilla",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__jamon",
+    "producto": "Jamón",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__huevo",
+    "producto": "Huevo",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__totopos",
+    "producto": "Totopos",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__tortillas",
+    "producto": "Tortillas",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__tocino",
+    "producto": "Tocino",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__queso-monterrey",
+    "producto": "Queso Monterrey",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__queso-fresco",
+    "producto": "Queso Fresco",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__queso-crema",
+    "producto": "Queso Crema",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__cremas",
+    "producto": "Cremas",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__salsa-marinara",
+    "producto": "Salsa Marinara",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__miel-de-abeja",
+    "producto": "Miel de Abeja",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__maple",
+    "producto": "Maple",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__chocolate-liquido",
+    "producto": "Chocolate líquido",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__chips-malangas",
+    "producto": "Chips/Malangas",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__papas-para-freir",
+    "producto": "Papas para freir",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__waffles",
+    "producto": "Waffles",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__helado",
+    "producto": "Helado",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__crema-batida",
+    "producto": "Crema batida",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__almejas-grandes",
+    "producto": "Almejas grandes",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__almejas-chicas",
+    "producto": "Almejas chicas",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__canela",
+    "producto": "Canela",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__crema-de-avellana",
+    "producto": "Crema de avellana",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__azucar",
+    "producto": "Azucar",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+  {
+    "id": "insumos-cocina__produccion__salsa-roja",
+    "producto": "Salsa Roja",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__salsa-verde",
+    "producto": "Salsa Verde",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__salsa-macha",
+    "producto": "Salsa Macha",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__frijoles",
+    "producto": "Frijoles",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__pollo",
+    "producto": "Pollo",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__milanesa",
+    "producto": "Milanesa",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__picadas",
+    "producto": "Picadas",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__cebolla-encurtida",
+    "producto": "Cebolla encurtida",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__mayonesa-mostaza",
+    "producto": "Mayonesa/Mostaza",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__azucar-glass",
+    "producto": "Azucar Glass",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__produccion__glaseado-de-roles",
+    "producto": "Glaseado de roles",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },
+  {
+    "id": "insumos-cocina__verduleria__jitomate",
+    "producto": "Jitomate",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },
+  {
+    "id": "insumos-cocina__verduleria__cebolla",
+    "producto": "Cebolla",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },
+  {
+    "id": "insumos-cocina__verduleria__chile",
+    "producto": "Chile",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },
+  {
+    "id": "insumos-cocina__verduleria__fresas",
+    "producto": "Fresas",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },
+  {
+    "id": "insumos-cocina__verduleria__champinones",
+    "producto": "Champiñones",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },
+  {
+    "id": "insumos-cocina__verduleria__arugula-espinaca",
+    "producto": "Arúgula/espinaca",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },
+  {
+    "id": "insumos-cocina__verduleria__limones",
+    "producto": "Limones",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },
+  {
+    "id": "insumos-cocina__panaderia__teleras",
+    "producto": "Teleras",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Panadería"
+  },
+  {
+    "id": "insumos-cocina__panaderia__baguettes",
+    "producto": "Baguettes",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Panadería"
+  },
+  {
+    "id": "insumos-cocina__panaderia__pan-de-caja",
+    "producto": "Pan de caja",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Panadería"
+  },
+  {
+    "id": "insumos-cocina__panaderia__brownies",
+    "producto": "Brownies",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Panadería"
+  },
+  {
+    "id": "insumos-cocina__panaderia__roles",
+    "producto": "Roles",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Panadería"
+  },
+  {
+    "id": "insumos-cocina__panaderia__croissants",
+    "producto": "Croissants",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Panadería"
+  },
+  {
+    "id": "higiene__general__sanitas",
+    "producto": "Sanitas",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "higiene__general__papel-de-bano",
+    "producto": "Papel de Baño",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "higiene__general__vinagre",
+    "producto": "Vinagre",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "higiene__general__cloro",
+    "producto": "Cloro",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "higiene__general__microdyn",
+    "producto": "Microdyn",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "higiene__general__jabon-de-trastes",
+    "producto": "Jabón de trastes",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "higiene__general__jabon-de-manos",
+    "producto": "Jabón de manos",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "higiene__general__servilletas",
+    "producto": "Servilletas",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "higiene__general__vitafilm",
+    "producto": "Vitafilm",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },
+  {
+    "id": "insumos-barra__preparaciones__agua-potable",
+    "producto": "Agua potable",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__hielo",
+    "producto": "Hielo",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__leche",
+    "producto": "Leche",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__cafe",
+    "producto": "Café",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__jugo-de-naranja",
+    "producto": "Jugo de Naranja",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__agua-mineral",
+    "producto": "Agua mineral",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__leche-vegetal",
+    "producto": "Leche Vegetal",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__te-de-frutos",
+    "producto": "Té de frutos",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__petalos-de-rosa",
+    "producto": "Pétalos de rosa",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__oreo",
+    "producto": "Oreo",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__mazapan",
+    "producto": "Mazapán",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__mango",
+    "producto": "Mango",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__frutos-rojos",
+    "producto": "Frutos Rojos",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__preparaciones__te-de-sabores",
+    "producto": "Té de Sabores",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__jarabe-natural",
+    "producto": "Jarabe natural",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__caramelo",
+    "producto": "Caramelo",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__chocolate-en-polvo",
+    "producto": "Chocolate en polvo",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__matcha",
+    "producto": "Matcha",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__chai",
+    "producto": "Chai",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__taro",
+    "producto": "Taro",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__jarabe-frambuesa",
+    "producto": "Jarabe Frambuesa",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__jarabe-horchata",
+    "producto": "Jarabe Horchata",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__pulpa-de-fresa",
+    "producto": "Pulpa de Fresa",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__jarabe-kiwi",
+    "producto": "Jarabe Kiwi",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__jarabe-lichi",
+    "producto": "Jarabe Lichi",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__polvo-de-pistache",
+    "producto": "Polvo de pistache",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__chamoy",
+    "producto": "Chamoy",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__jarabes-y-polvos__perlas-para-sodas",
+    "producto": "Perlas para sodas",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Jarabes y polvos"
+  },
+  {
+    "id": "insumos-barra__complementos__vasos-para-frios",
+    "producto": "Vasos para fríos",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Complementos"
+  },
+  {
+    "id": "insumos-barra__complementos__vasos-para-calientes",
+    "producto": "Vasos para calientes",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Complementos"
+  },
+  {
+    "id": "insumos-barra__complementos__vasos-flat-white",
+    "producto": "Vasos Flat White",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Complementos"
+  },
+  {
+    "id": "insumos-barra__complementos__agitadores",
+    "producto": "Agitadores",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Complementos"
+  },
+  {
+    "id": "insumos-barra__complementos__fajillas",
+    "producto": "Fajillas",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Complementos"
+  },
+  {
+    "id": "insumos-barra__complementos__popotes",
+    "producto": "Popotes",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Complementos"
+  },
+  {
+    "id": "insumos-barra__complementos__popotes-soda-italiana",
+    "producto": "Popotes soda italiana",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Complementos"
+  }
+]

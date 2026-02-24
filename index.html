@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dos Gardenias: Inventario</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="brand">
+        <!-- Cambia la ruta por tu logo real -->
+        <img class="brand__logo" src="./assets/logo-dos-gardenias-blanco.png" alt="Dos Gardenias" />
+        <div class="brand__text">
+          <h1>Dos Gardenias: Inventario</h1>
+        </div>
+      </div>
+
+      <div class="topbar__right">
+        <div class="chip" id="markedCount" aria-live="polite">Marcados: 0</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- FILTROS / BÚSQUEDA -->
+      <section class="panel" aria-label="Filtros y búsqueda">
+        <div class="filters">
+          <label class="field">
+            <span class="field__label">Categoría</span>
+            <select id="categorySelect">
+              <option value="__all__">Todas</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Subcategoría</span>
+            <select id="subcategorySelect" disabled>
+              <option value="__all__">Todas</option>
+            </select>
+          </label>
+
+          <label class="field field--search">
+            <span class="field__label">Buscar</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Buscar producto…"
+              autocomplete="off"
+            />
+          </label>
+        </div>
+
+        <label class="checkbox">
+          <input id="hideInventoryToggle" type="checkbox" />
+          <span>Ocultar lista</span>
+        </label>
+
+        <!-- LISTA INVENTARIO -->
+        <div id="inventoryWrap" class="inventoryWrap">
+          <div id="inventoryContainer" class="inventory" aria-live="polite">
+            <div class="loading" id="loadingState">Cargando…</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENVÍO -->
+      <section class="panel panel--send" aria-label="Resumen y envío">
+        <div class="sendHeader">
+          <h2>Resumen</h2>
+          <span class="muted" id="summaryCount">0 elementos</span>
+        </div>
+
+        <div class="summaryMini">
+          <div class="summaryMini__block">
+            <div class="summaryMini__title">‼️ Se acabó</div>
+            <div class="summaryMini__list" id="summaryOut"></div>
+          </div>
+
+          <div class="summaryMini__block">
+            <div class="summaryMini__title">⚠️ Queda poco</div>
+            <div class="summaryMini__list" id="summaryLow"></div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="sendBtn" class="btn btn--primary" disabled>Enviar</button>
+          <button id="clearBtn" class="btn btn--ghost" disabled>Vaciar selección</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Uso interno · Dos Gardenias
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
