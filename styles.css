@@ -1,6 +1,4 @@
-/* =========================
-   VARIABLES
-========================= */
+
 :root {
   --bg-dark: #111f3e;
   --bg-panel: #1e1e1e;
@@ -12,9 +10,6 @@
   --transition: 0.2s ease;
 }
 
-/* =========================
-   RESET BÁSICO
-========================= */
 * {
   box-sizing: border-box;
 }
@@ -31,9 +26,6 @@ body {
 height: 100vh;
 }
 
-/* =========================
-   HEADER
-========================= */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -50,26 +42,25 @@ height: 100vh;
 }
 
 .brand__logo {
-  height: 38px;
+    width: 100px;
+    height: auto;
 }
 
 .brand__text h1 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
 .chip {
+  justify-content: center;
   background: var(--accent);
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
-/* =========================
-   LAYOUT
-========================= */
 .container {
   padding: 18px;
   max-width: 900px;
@@ -83,9 +74,7 @@ height: 100vh;
   margin-bottom: 20px;
 }
 
-/* =========================
-   FILTROS
-========================= */
+
 .filters {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -96,7 +85,7 @@ height: 100vh;
 .field {
   display: flex;
   flex-direction: column;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .field__label {
@@ -106,7 +95,7 @@ height: 100vh;
 
 select,
 input[type="search"] {
-  padding: 8px 10px;
+  padding: 20px 10px;
   border-radius: var(--radius);
   border: none;
   background: var(--bg-dark);
@@ -118,19 +107,18 @@ select:disabled {
   opacity: 0.5;
 }
 
+
 .checkbox {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
+  gap: 10px;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-/* =========================
-   INVENTARIO
-========================= */
+
 .inventoryWrap {
-  max-height: 400px;
+  max-height: 300px;
   overflow-y: auto;
   border-top: 1px solid var(--accent);
   padding-top: 10px;
@@ -142,7 +130,7 @@ select:disabled {
   align-items: center;
   padding: 10px 6px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .inventoryItem__name {
@@ -161,7 +149,7 @@ select:disabled {
   padding: 4px 6px;
   cursor: pointer;
   transition: var(--transition);
-  font-size: 0.9rem;
+  font-size: 1.7rem;
 }
 
 .iconBtn:hover {
@@ -178,16 +166,14 @@ select:disabled {
   color: #fff;
 }
 
-/* =========================
-   RESUMEN / ENVÍO
-========================= */
+
 .panel--send h2 {
   margin: 0 0 6px 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .muted {
-  font-size: 0.8rem;
+  font-size: 1rem;
   opacity: 0.6;
 }
 
@@ -196,7 +182,7 @@ select:disabled {
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing);
   margin: 12px 0;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .summaryMini__title {
@@ -209,9 +195,7 @@ select:disabled {
   word-wrap: break-word;
 }
 
-/* =========================
-   BOTONES
-========================= */
+
 .actions {
   display: flex;
   gap: var(--spacing);
@@ -224,6 +208,7 @@ select:disabled {
   border: none;
   cursor: pointer;
   font-weight: 600;
+  font-size: 1.5rem;
   transition: var(--transition);
 }
 
@@ -246,9 +231,6 @@ select:disabled {
   background: var(--accent);
 }
 
-/* =========================
-   FOOTER
-========================= */
 .footer {
   text-align: center;
   padding: 14px;

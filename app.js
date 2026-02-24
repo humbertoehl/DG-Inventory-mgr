@@ -10,10 +10,10 @@
   const STORAGE_KEY = "dg_inventory_selection_v1";
 
   // Status según tu mensaje solicitado:
-  const STATUS_OUT = "out"; // Se acabó  -> ⚠️
-  const STATUS_LOW = "low"; // Queda Poco -> ‼️
-  const EMOJI_WARN = "\u26A0\uFE0F";  // ⚠️
-  const EMOJI_BANG = "\u203C\uFE0F";  // ‼️
+  const STATUS_OUT = "out"; // Se acabó  -> 🚫
+  const STATUS_LOW = "low"; // Queda Poco -> ⚠️
+  const EMOJI_OUT = "\uD83D\uDEAB";  // 🚫
+  const EMOJI_LOW = "\u26A0\uFE0F";  // ⚠️
 
   // ========= DOM =========
   const $categorySelect = document.getElementById("categorySelect");
@@ -38,8 +38,8 @@
   // En tu HTML venían invertidos; aquí los dejamos como tú lo pediste:
   const summaryTitles = document.querySelectorAll(".summaryMini__title");
   if (summaryTitles.length >= 2) {
-    summaryTitles[0].textContent = "⚠️ Se acabó";
-    summaryTitles[1].textContent = "‼️ Queda Poco";
+    summaryTitles[0].textContent = "🚫 Se acabó";
+    summaryTitles[1].textContent = "⚠️ Queda Poco";
   }
 
   // ========= ESTADO =========
@@ -217,19 +217,19 @@ $sendBtn.addEventListener("click", () => {
       const actions = document.createElement("div");
       actions.className = "inventoryItem__actions";
 
-      // ⚠️ -> Se acabó
+      // 🚫 -> Se acabó
       const btnWarn = document.createElement("button");
       btnWarn.className = "iconBtn";
       btnWarn.type = "button";
-      btnWarn.textContent = "⚠️";
+      btnWarn.textContent = "🚫";
       btnWarn.title = "Se acabó";
       btnWarn.setAttribute("aria-label", `Marcar "${item.producto}" como Se acabó`);
 
-      // ‼️ -> Queda Poco
+      // ⚠️ -> Queda Poco
       const btnDanger = document.createElement("button");
       btnDanger.className = "iconBtn";
       btnDanger.type = "button";
-      btnDanger.textContent = "‼️";
+      btnDanger.textContent = "⚠️";
       btnDanger.title = "Queda Poco";
       btnDanger.setAttribute("aria-label", `Marcar "${item.producto}" como Queda Poco`);
 
@@ -237,13 +237,13 @@ $sendBtn.addEventListener("click", () => {
       applyButtonState(item.id, btnWarn, btnDanger);
 
       btnWarn.addEventListener("click", () => {
-        toggleStatus(item.id, STATUS_OUT); // ⚠️
+        toggleStatus(item.id, STATUS_OUT); // 🚫
         applyButtonState(item.id, btnWarn, btnDanger);
         renderSummary();
       });
 
       btnDanger.addEventListener("click", () => {
-        toggleStatus(item.id, STATUS_LOW); // ‼️
+        toggleStatus(item.id, STATUS_LOW); // ⚠️
         applyButtonState(item.id, btnWarn, btnDanger);
         renderSummary();
       });
@@ -267,10 +267,10 @@ $sendBtn.addEventListener("click", () => {
     btnWarn.classList.remove("active-warn");
     btnDanger.classList.remove("active-danger");
 
-    // Si está marcado como OUT (Se acabó) -> activar ⚠️
+    // Si está marcado como OUT (Se acabó) -> activar 🚫
     if (st === STATUS_OUT) btnWarn.classList.add("active-warn");
 
-    // Si está marcado como LOW (Queda Poco) -> activar ‼️
+    // Si está marcado como LOW (Queda Poco) -> activar ⚠️
     if (st === STATUS_LOW) btnDanger.classList.add("active-danger");
 
     updateCounts();
@@ -334,13 +334,13 @@ $sendBtn.addEventListener("click", () => {
     lines.push(`Fecha: ${dateStr}`);
     lines.push("");
 
-    lines.push(`${EMOJI_WARN}Se acabó (${outItems.length}):`);
+    lines.push(`${EMOJI_OUT}Se acabó (${outItems.length}):`);
     if (outItems.length) {
       for (const name of outItems) lines.push(`- ${name}`);
     }
     lines.push("");
 
-    lines.push(`${EMOJI_BANG}Queda Poco (${lowItems.length}):`);
+    lines.push(`${EMOJI_LOW}Queda Poco (${lowItems.length}):`);
     if (lowItems.length) {
       for (const name of lowItems) lines.push(`- ${name}`);
     }
