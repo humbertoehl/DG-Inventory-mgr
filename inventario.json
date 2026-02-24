@@ -550,5 +550,11 @@
     "producto": "Popotes soda italiana",
     "categoria": "Insumos Barra",
     "subcategoria": "Complementos"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__pepperoni",
+    "producto": "Pepperoni",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
   }
 ]
