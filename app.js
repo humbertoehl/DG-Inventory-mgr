@@ -17,6 +17,7 @@
   const $subcategorySelect = document.getElementById("subcategorySelect");
   const $searchInput = document.getElementById("searchInput");
   const $hideInventoryToggle = document.getElementById("hideInventoryToggle");
+  const $hideJustSelectedItems = document.getElementById("hideJustSelectedItems");
 
   const $inventoryWrap = document.getElementById("inventoryWrap");
   const $inventoryContainer = document.getElementById("inventoryContainer");
@@ -65,6 +66,10 @@
 
     $hideInventoryToggle.addEventListener("change", () => {
       $inventoryWrap.style.display = $hideInventoryToggle.checked ? "none" : "block";
+    });
+
+    $hideJustSelectedItems.addEventListener("change", () => {
+      renderList();
     });
 
     $clearBtn.addEventListener("click", () => {
@@ -174,6 +179,10 @@ $sendBtn.addEventListener("click", () => {
     if (q) {
       list = list.filter((x) => x.producto.toLowerCase().includes(q));
     }
+  
+    if ($hideJustSelectedItems.checked) {
+      list = list.filter((x) => !selectionMap[x.id]);
+    }
 
     $inventoryContainer.innerHTML = "";
 
@@ -221,20 +230,38 @@ $sendBtn.addEventListener("click", () => {
       applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
 
       btnWarn.addEventListener("click", () => {
-        toggleStatus(item.id, STATUS_OUT); // 🚫
-        applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
+        toggleStatus(item.id, STATUS_OUT);
+
+        if ($hideJustSelectedItems.checked) {
+          renderList();
+        } else {
+          applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
+        }
+
         renderSummary();
       });
 
       btnDanger.addEventListener("click", () => {
-        toggleStatus(item.id, STATUS_LOW); // ⚠️
-        applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
+        toggleStatus(item.id, STATUS_LOW);
+
+        if ($hideJustSelectedItems.checked) {
+          renderList();
+        } else {
+          applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
+        }
+
         renderSummary();
       });
 
       btnOk.addEventListener("click", () => {
-        toggleStatus(item.id, STATUS_OK); // ✅ 
-        applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
+        toggleStatus(item.id, STATUS_OK);
+
+        if ($hideJustSelectedItems.checked) {
+          renderList();
+        } else {
+          applyButtonState(item.id, row, btnWarn, btnDanger, btnOk);
+        }
+
         renderSummary();
       });
 

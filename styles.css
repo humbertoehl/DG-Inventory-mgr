@@ -106,6 +106,12 @@ select:disabled {
   opacity: 0.5;
 }
 
+.checkboxSpace {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.85rem;
+}
 
 .checkbox {
   display: flex;
@@ -115,6 +121,10 @@ select:disabled {
   margin-bottom: 10px;
 }
 
+.checkbox input[type="checkbox"] {
+  transform: scale(1.8);
+  cursor: pointer;
+}
 
 .inventoryWrap {
   max-height: 300px;
