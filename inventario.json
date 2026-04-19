@@ -556,5 +556,75 @@
     "producto": "Pepperoni",
     "categoria": "Insumos Cocina",
     "subcategoria": "Miscelanea"
+  },
+
+
+
+    {
+    "id": "insumos-cocina__miscelanea__sal",
+    "producto": "Sal",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },
+    {
+    "id": "insumos-cocina__miscelanea__manteca",
+    "producto": "Manteca",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },    {
+    "id": "insumos-cocina__miscelanea__aceite",
+    "producto": "Aceite",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },    {
+    "id": "insumos-cocina__miscelanea__caldo-de-pollo",
+    "producto": "Caldo de Pollo",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },    {
+    "id": "insumos-cocina__miscelanea__papel-encerado",
+    "producto": "Papel Encerado",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },    {
+    "id": "insumos-cocina__miscelanea__pan-molido",
+    "producto": "Pan Molido",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },    {
+    "id": "insumos-cocina__miscelanea__pimienta",
+    "producto": "Pimienta",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },    {
+    "id": "insumos-cocina__miscelanea__pasta",
+    "producto": "Pasta",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
+  },    {
+    "id": "insumos-cocina__panaderia__pan-brioche",
+    "producto": "Pan brioche",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Panadería"
+  },    {
+    "id": "insumos-cocina__produccion__cebolla-caramelizada",
+    "producto": "Cebolla caramelizada",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },    {
+    "id": "insumos-cocina__produccion__hamburguesa-de-pollo",
+    "producto": "Hamburguesa de pollo",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },    {
+    "id": "insumos-cocina__verduleria__tomate-cherry",
+    "producto": "Tomate cherry",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },    {
+    "id": "insumos-cocina__miscelanea__vinagreta",
+    "producto": "Vinagreta",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
   }
 ]
