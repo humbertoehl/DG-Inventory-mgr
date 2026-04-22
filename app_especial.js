@@ -332,7 +332,7 @@ function applyButtonState(id, row, btnWarn, btnDanger, btnOk) {
 
   function updateCounts() {
     const total = Object.keys(selectionMap).length;
-    $markedCount.textContent = `Marcados: ${total}`;
+    $markedCount.textContent = `Lista: ${total}`;
     $summaryCount.textContent = `${total} ${total === 1 ? "elemento" : "elementos"}`;
 
     $sendBtn.disabled = total === 0;
