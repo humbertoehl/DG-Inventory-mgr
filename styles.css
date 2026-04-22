@@ -25,6 +25,19 @@ body {
 height: 100vh;
 }
 
+button {
+ /* style consistent with page */
+  background: var(--accent);
+  border: 1px solid var(--light);
+  border-radius: var(--radius);
+  padding: 10px;
+  color: var(--light);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 10px;
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -33,6 +46,7 @@ height: 100vh;
   background: var(--bg-panel);
   border-bottom: 2px solid var(--accent);
 }
+
 
 .brand {
   display: flex;
@@ -122,8 +136,12 @@ select:disabled {
 }
 
 .checkbox input[type="checkbox"] {
-  transform: scale(1.8);
+  transform: scale(2);
   cursor: pointer;
+}
+
+.checkbox span {
+  font-size: 1.0rem;
 }
 
 .inventoryWrap {
@@ -261,6 +279,7 @@ select:disabled {
   background: var(--bg-panel);
   border-top: 2px solid var(--accent);
 }
+
 
 @media (max-width: 700px) {
   .filters {
