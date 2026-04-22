@@ -1,6 +1,6 @@
 
 (() => {
-  const INVENTORY_URL = "./inventario_especial.json";
+  const INVENTORY_URL = "./inventario_temporada.json";
 
   const WHATSAPP_NUMBER = "522283338572";
 
@@ -349,7 +349,7 @@ function applyButtonState(id, row, btnWarn, btnDanger, btnOk) {
     const dateStr = formatDateDDMMYYYY(new Date());
 
     const lines = [];
-    lines.push("Inventario para menú especial");
+    lines.push("Inventario para menú de temporada:");
     lines.push(`Fecha: ${dateStr}`);
     lines.push("");
 

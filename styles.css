@@ -30,12 +30,13 @@ button {
   background: var(--accent);
   border: 1px solid var(--light);
   border-radius: var(--radius);
-  padding: 10px;
+  padding: 5px;
   color: var(--light);
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .topbar {
@@ -68,7 +69,8 @@ button {
 .chip {
   justify-content: center;
   background: var(--accent);
-  padding: 6px 12px;
+  padding: 6px 5px;
+  margin-left: 10px;
   border-radius: 20px;
   font-size: 1.2rem;
   font-weight: 600;

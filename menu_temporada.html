@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dos Gardenias - Menú Especial</title>
+    <title>Dos Gardenias - Menú de Temporada</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
@@ -12,11 +12,12 @@
       <div class="brand">
         <img class="brand__logo" src="./assets/logo-dos-gardenias-blanco.png" alt="Dos Gardenias" />
         <div class="brand__text">
-          <h1>DG <br>  Menú Especial</h1>
+          <h1>DG <br>  Menú de Temporada</h1>
         </div>
       </div>
 
       <div class="topbar__right">
+        <button onclick="window.location.href='index.html'" aria-label="Inventario General">Inventario General</button>
         <div class="chip" id="markedCount" aria-live="polite">Lista: 0</div>
       </div>
     </header>
@@ -60,7 +61,6 @@
           <span>Ocultar seleccionados</span>
         </label>
 
-        <button onclick="window.location.href='index.html'" aria-label="Inventario General">Inventario General</button>
         </div>
 
         <div id="inventoryWrap" class="inventoryWrap">
@@ -99,6 +99,6 @@
       Uso interno · Dos Gardenias
     </footer>
 
-    <script src="./app_especial.js" defer></script>
+    <script src="./app_temporada.js" defer></script>
   </body>
 </html>
