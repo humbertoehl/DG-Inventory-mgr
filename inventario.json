@@ -626,5 +626,55 @@
     "producto": "Vinagreta",
     "categoria": "Insumos Cocina",
     "subcategoria": "Miscelanea"
+  },    {
+    "id": "higiene__general__bolsas-60x90",
+    "producto": "Bolsas 60x90",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },    {
+    "id": "higiene__general__bolsas-90x120",
+    "producto": "Bolsas 90x120",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },    {
+    "id": "insumos-cocina__verduleria__lechuga",
+    "producto": "Lechuga",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },    {
+    "id": "insumos-barra__preparaciones__tonicas",
+    "producto": "Tónicas",
+    "categoria": "Insumos Barra",
+    "subcategoria": "Preparaciones"
+  },    {
+    "id": "insumos-cocina__produccion__mayonesa-chipotle",
+    "producto": "Mayonesa Chipotle",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Producción"
+  },    {
+    "id": "insumos-cocina__verduleria__epazote",
+    "producto": "Epazote",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },    {
+    "id": "insumos-cocina__verduleria__cilantro",
+    "producto": "Cilantro",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Verdulería"
+  },    {
+    "id": "insumos-cocina__panaderia__tarta-vasca",
+    "producto": "Tarta Vasca",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Panadería"
+  },    {
+    "id": "higiene__general__lysol",
+    "producto": "Lysol",
+    "categoria": "Higiene",
+    "subcategoria": "General"
+  },    {
+    "id": "insumos-cocina__miscelanea__base-para-frappe",
+    "producto": "Base para frappé",
+    "categoria": "Insumos Cocina",
+    "subcategoria": "Miscelanea"
   }
 ]
