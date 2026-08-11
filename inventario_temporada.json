@@ -1,7 +1,49 @@
 [
   {
-    "id": "categoria-especial_Subcategoria-especial_ingrediente-especial",
-    "producto": "Ingrediente especial",
+    "id": "categoria-especial_Subcategoria-especial_tortillas-de-harina",
+    "producto": "tortillas de harina",
+    "categoria": "Categoria especial",
+    "subcategoria": "Subcategoria especial"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__pimiento-morron",
+    "producto": "pimiento morrón",
+    "categoria": "Categoria especial",
+    "subcategoria": "Subcategoria especial"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__mostachon",
+    "producto": "mostachón",
+    "categoria": "Categoria especial",
+    "subcategoria": "Subcategoria especial"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__jarabe-lavanda",
+    "producto": "jarabe lavanda",
+    "categoria": "Categoria especial",
+    "subcategoria": "Subcategoria especial"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__pulpa-de-maracuya",
+    "producto": "pulpa maracuyá",
+    "categoria": "Categoria especial",
+    "subcategoria": "Subcategoria especial"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__aguacate",
+    "producto": "aguacate",
+    "categoria": "Categoria especial",
+    "subcategoria": "Subcategoria especial"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__cremoso-de-aguacate",
+    "producto": "cremoso de aguacate",
+    "categoria": "Categoria especial",
+    "subcategoria": "Subcategoria especial"
+  },
+  {
+    "id": "insumos-cocina__miscelanea__cold-brew",
+    "producto": "cold brew",
     "categoria": "Categoria especial",
     "subcategoria": "Subcategoria especial"
   }

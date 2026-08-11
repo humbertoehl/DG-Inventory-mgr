@@ -597,11 +597,6 @@
     "categoria": "Insumos Cocina",
     "subcategoria": "Miscelanea"
   },    {
-    "id": "insumos-cocina__miscelanea__pasta",
-    "producto": "Pasta",
-    "categoria": "Insumos Cocina",
-    "subcategoria": "Miscelanea"
-  },    {
     "id": "insumos-cocina__panaderia__pan-brioche",
     "producto": "Pan brioche",
     "categoria": "Insumos Cocina",
@@ -676,5 +671,10 @@
     "producto": "Base para frappé",
     "categoria": "Insumos Cocina",
     "subcategoria": "Miscelanea"
+  },    {
+    "id": "higiene__general__desengrasante",
+    "producto": "Desengrasante",
+    "categoria": "Higiene",
+    "subcategoria": "General"
   }
 ]
